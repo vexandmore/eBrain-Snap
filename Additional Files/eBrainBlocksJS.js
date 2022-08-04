@@ -64,7 +64,7 @@ ParentEveBrain.prototype = {
     if(msg.arg && msg.arg.toString() != '[object Object]') {
       msg.arg = msg.arg.toString();
     }
-    if(['stop', 'pause', 'resume', 'ping', 'version', 'pinServo'].indexOf(msg.cmd) >= 0){
+    if(['stop', 'pause', 'resume', 'ping', 'version'].indexOf(msg.cmd) >= 0){
       this.send_msg(msg);
     }else{
       this.msg_stack.push(msg);
